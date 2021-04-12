@@ -36,7 +36,7 @@ import UIKit
     /// - SeeAlso: `itemAnimationConfiguration`
     ///
     func open(animated: Bool = true, completion: (() -> Void)? = nil) {
-        guard let superview = superview, buttonState == .closed, !enabledItems.isEmpty, !isSingleActionButton else {
+        guard let superview = UIApplication.shared.keyWindow, buttonState == .closed, !enabledItems.isEmpty, !isSingleActionButton else {
             return
         }
 
